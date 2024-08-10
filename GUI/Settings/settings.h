@@ -17,20 +17,12 @@
 #include <QTextStream>
 
 
-/*!
-  Custom classes for efficient handling
- */
-#include <GUI/Size/customize.h>
-
 class settings : public QWidget
 {
     Q_OBJECT
 private:
 /***********************************************************/
 //Variables
-
-    //Classes
-    customize* classCustomize;
 
 //GUI Elements
 
@@ -66,11 +58,6 @@ private:
     QPushButton* btnSavePlotImage;
 /***********************************************************/
 //Functions
-
-    /*!
-     * \brief Instantiate custom class objects
-     */
-    void initClasses();
 
 
     /*!

@@ -9,19 +9,12 @@
 #include <QGroupBox>
 #include <QGridLayout>
 
-/*!
-  Custom classes for efficient handling
- */
-#include <GUI/Size/customize.h>
 
 class zoomSettings : public QObject
 {
     Q_OBJECT
 private:
 //Variables
-
-    //Classes
-    customize* classCustomize;
 
 //GUI Elements
 
@@ -36,11 +29,6 @@ private:
 
 /***********************************************************/
 //Functions
-
-    /*!
-     * \brief Instantiate custom class objects
-     */
-    void initClasses();
 
     /*!
      * \brief Instantiate custom push buttons

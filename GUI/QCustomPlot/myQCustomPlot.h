@@ -18,7 +18,6 @@
   Custom classes for efficient handling
  */
 #include <Library/QCustomPlot/qcustomplot.h>
-#include <GUI/Size/customize.h>
 #include <Process/Encryption/simplecrypt.h>
 
 class myQCustomPlot : public QWidget
@@ -29,7 +28,6 @@ private:
     /*!
      * \brief custom class objects
      */
-    customize*   ClassCustomize;
     QCustomPlot* ClassNewFullCustomPlot;
 
     /*!

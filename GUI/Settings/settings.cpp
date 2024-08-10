@@ -10,7 +10,6 @@ settings *settings::getInstance()
 
 settings::settings()
 {
-    initClasses();
     initLabels();
     initCheckBoxes();
     initSpinBoxes();
@@ -20,12 +19,6 @@ settings::settings()
 
     setForm();
     setConnections();
-}
-
-
-void settings::initClasses()
-{
-    classCustomize = new customize();
 }
 
 void settings::initLabels()
@@ -46,12 +39,8 @@ void settings::initLabels()
 
     for(int i=0; i < n; ++i)
     {
-        lstLabels[i]->setFont(classCustomize->lblFont);
-        lstLabels[i]->setFixedWidth(classCustomize->max_width_label);
-        lstLabels[i]->setFixedHeight(classCustomize->max_height_label);
-        lstLabels[i]->setSizePolicy(classCustomize->spFixed);
+
         lstLabels[i]->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-        lstLabels[i]->setStyleSheet(classCustomize->lblStylSheet);
     }
 }
 
@@ -60,22 +49,6 @@ void settings::initCheckBoxes()
     chkbCustomTicks  = new QCheckBox("Custom Ticks");
     chkbEnablePointSelection   = new QCheckBox("Enable point selection mode");
     chkbReverseXaxis = new QCheckBox("Reverse x axis");
-
-    const int n = 3;
-    QCheckBox* lstChechBoxes[n] =
-    {
-        chkbCustomTicks, chkbEnablePointSelection, chkbReverseXaxis
-    };
-
-
-    for(int i=0; i < n; ++i)
-    {
-        lstChechBoxes[i]->setFont(classCustomize->chkbFont);
-        lstChechBoxes[i]->setFixedWidth(classCustomize->max_width_checkBox);
-        lstChechBoxes[i]->setFixedHeight(classCustomize->max_height_checkBox);
-        lstChechBoxes[i]->setSizePolicy(classCustomize->spFixed);
-        lstChechBoxes[i]->setStyleSheet(classCustomize->chkbStylSheet);
-    }
 }
 
 
@@ -96,12 +69,7 @@ void settings::initSpinBoxes()
 
     for(int i = 0; i < nn; ++i)
     {
-        lstSpinBoxes[i]->setFont(classCustomize->sbFont);
-        lstSpinBoxes[i]->setFixedWidth(classCustomize->max_width_doubleSpinBox);
-        lstSpinBoxes[i]->setFixedHeight(classCustomize->max_height_doubleSpinBox);
-        lstSpinBoxes[i]->setSizePolicy(classCustomize->spExpanding);
         lstSpinBoxes[i]->setAlignment(Qt::AlignLeft);
-        lstSpinBoxes[i]->setStyleSheet(classCustomize->sbStylSheet);
     }
 
     const int n = 4;
@@ -112,12 +80,7 @@ void settings::initSpinBoxes()
 
     for(int i = 0; i < n; ++i)
     {
-        lstDoubleSpinBoxes[i]->setFont(classCustomize->sbFont);
-        lstDoubleSpinBoxes[i]->setFixedWidth(classCustomize->max_width_doubleSpinBox);
-        lstDoubleSpinBoxes[i]->setFixedHeight(classCustomize->max_height_doubleSpinBox);
-        lstDoubleSpinBoxes[i]->setSizePolicy(classCustomize->spExpanding);
         lstDoubleSpinBoxes[i]->setAlignment(Qt::AlignLeft);
-        lstDoubleSpinBoxes[i]->setStyleSheet(classCustomize->sbStylSheet);
     }
 
     dsbMinimumX->setRange(0, 10000);
@@ -148,19 +111,6 @@ void settings::initRadioButtons()
     rdBtnGroupScale->addButton(rdBtnAutoScale);
     rdBtnGroupScale->addButton(rdBtnCustomScale);
 
-    const int n = 4;
-    QRadioButton* lstRadioButtons[n] = {rdBtnLeftAxis, rdBtnRightAxis, rdBtnAutoScale, rdBtnCustomScale};
-
-
-    for(int i=0; i < n; ++i)
-    {
-        lstRadioButtons[i]->setFont(classCustomize->rdbtnFont);
-        lstRadioButtons[i]->setFixedWidth(classCustomize->max_width_radioButton);
-        lstRadioButtons[i]->setFixedHeight(classCustomize->max_height_radioButton);
-        lstRadioButtons[i]->setSizePolicy(classCustomize->spExpanding);
-        lstRadioButtons[i]->setStyleSheet(classCustomize->rdbtnStylSheet);
-    }
-
     rdBtnAutoScale->setChecked(true);
     rdBtnLeftAxis->setChecked(true);
 }
@@ -168,12 +118,6 @@ void settings::initRadioButtons()
 void settings::initPushButtons()
 {
     btnSavePlotImage = new QPushButton("Save Plot Image");
-
-    btnSavePlotImage->setFont(classCustomize->btnFont);
-    btnSavePlotImage->setFixedWidth(classCustomize->max_width_pushButton);
-    btnSavePlotImage->setFixedHeight(classCustomize->max_height_pushButton);
-    btnSavePlotImage->setSizePolicy(classCustomize->spExpanding);
-    btnSavePlotImage->setStyleSheet(classCustomize->btnStylSheet);
 }
 
 void settings::initGroupBoxes()
@@ -181,10 +125,6 @@ void settings::initGroupBoxes()
     grbForm = new QGroupBox();
 
     grbForm->setTitle("Settinhgs");
-    grbForm->setFixedWidth(classCustomize->max_width_groupBox);
-    grbForm->setFixedHeight(classCustomize->max_height_groupBox * .8);
-    grbForm->setStyleSheet(classCustomize->grbtnStylSheet);
-    grbForm->setSizePolicy(classCustomize->spFixed);
 }
 
 void settings::setForm()
@@ -211,7 +151,7 @@ void settings::setForm()
     grl->addWidget(chkbCustomTicks   , 4, 0);
     grl->addWidget(sbCustomTicks     , 4, 1);
 
-    grl->addWidget(chkbEnablePointSelection    , 5, 0);
+    grl->addWidget(chkbEnablePointSelection, 5, 0);
     grl->addWidget(lblDeltaX         , 5, 1);
     grl->addWidget(lblDeltaY         , 5, 2);
 
@@ -232,8 +172,8 @@ void settings::setConnections()
         connect(rdBtnLeftAxis,  &QRadioButton::clicked, this, &settings::signalLeftYAxis);
     }
     {
-        connect(rdBtnCustomScale , &QRadioButton::clicked, this, &settings::slotRadioButtonCustomScale);
-        connect(rdBtnAutoScale,    &QRadioButton::clicked, this, &settings::slotRadioButtonAutoScale);
+        connect(rdBtnCustomScale, &QRadioButton::clicked, this, &settings::slotRadioButtonCustomScale);
+        connect(rdBtnAutoScale,   &QRadioButton::clicked, this, &settings::slotRadioButtonAutoScale);
 
         connect(dsbMinimumX, SIGNAL(valueChanged(double)), this, SLOT(slotSpinBox()));
         connect(dsbMaximumX, SIGNAL(valueChanged(double)), this, SLOT(slotSpinBox()));
@@ -242,20 +182,20 @@ void settings::setConnections()
     }
     {
         //custom Ticks
-        connect(chkbCustomTicks   , &QCheckBox::clicked,       this, &settings::slotSetTicks);
-        connect(sbCustomTicks     , SIGNAL(valueChanged(int)), this, SLOT(slotSetTicks()));
+        connect(chkbCustomTicks, &QCheckBox::clicked,       this, &settings::slotSetTicks);
+        connect(sbCustomTicks  , SIGNAL(valueChanged(int)), this, SLOT(slotSetTicks()));
     }
     {
         //save Image
-        connect(btnSavePlotImage   , &QCheckBox::clicked, this, &settings::slotSavePlotImage);
+        connect(btnSavePlotImage, &QCheckBox::clicked, this, &settings::slotSavePlotImage);
     }
     {
         //reverse x-axis
-        connect(chkbReverseXaxis   , &QCheckBox::clicked, this, &settings::slotReverseXAxis);
+        connect(chkbReverseXaxis, &QCheckBox::clicked, this, &settings::slotReverseXAxis);
     }
     {
         //Enable point selection mode
-        connect(chkbEnablePointSelection   , &QCheckBox::clicked, this, &settings::signalEnablePointSelection);
+        connect(chkbEnablePointSelection, &QCheckBox::clicked, this, &settings::signalEnablePointSelection);
     }
 }
 

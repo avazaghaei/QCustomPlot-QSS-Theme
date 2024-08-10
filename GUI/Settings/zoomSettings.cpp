@@ -10,7 +10,6 @@ zoomSettings *zoomSettings::getInstance()
 
 zoomSettings::zoomSettings()
 {
-    initClasses();
     initPushButtons();
     initGroupBoxes();
     initSpacer();
@@ -19,42 +18,18 @@ zoomSettings::zoomSettings()
     setConnections();
 }
 
-void zoomSettings::initClasses()
-{
-    classCustomize = new customize();
-}
-
 void zoomSettings::initPushButtons()
 {
     btnZoomIn        = new QPushButton("Zoom In");
     btnZoomOut       = new QPushButton("Zoom Out");
     btnResetZoom     = new QPushButton("Reset Zoom");
     btnAreaSelection = new QPushButton("Area Selection");
-
-
-    const int n = 4;
-    QPushButton* lstButtons [n] =
-    {
-        btnZoomIn, btnZoomOut, btnResetZoom, btnAreaSelection
-    };
-    for(int i = 0; i < n; ++i)
-    {
-        lstButtons[i]->setFont(classCustomize->btnFont);
-        lstButtons[i]->setFixedWidth(classCustomize->max_width_pushButton);
-        lstButtons[i]->setFixedHeight(classCustomize->max_height_pushButton);
-        lstButtons[i]->setSizePolicy(classCustomize->spExpanding);
-        lstButtons[i]->setStyleSheet(classCustomize->btnStylSheet);
-    }
 }
 
 void zoomSettings::initGroupBoxes()
 {
     grbForm = new QGroupBox();
     grbForm->setTitle("Zoom Settinhgs");
-    grbForm->setFixedWidth(classCustomize->max_width_groupBox );
-    grbForm->setFixedHeight(classCustomize->max_height_groupBox * .2);
-    grbForm->setStyleSheet(classCustomize->grbtnStylSheet);
-    grbForm->setSizePolicy(classCustomize->spFixed);
 }
 
 void zoomSettings::initSpacer()

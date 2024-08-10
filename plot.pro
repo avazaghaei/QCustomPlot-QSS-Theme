@@ -20,7 +20,7 @@ SOURCES += \
     GUI/QCustomPlot/myQCustomPlot.cpp \
     GUI/Settings/settings.cpp \
     GUI/Settings/zoomSettings.cpp \
-    GUI/Size/customize.cpp \
+    GUI/Theme/Theme.cpp \
     Library/QCustomPlot/qcustomplot.cpp \
     Process/Encryption/simplecrypt.cpp \
     Process/Process.cpp \
@@ -31,7 +31,7 @@ HEADERS += \
     GUI/QCustomPlot/myQCustomPlot.h \
     GUI/Settings/settings.h \
     GUI/Settings/zoomSettings.h \
-    GUI/Size/customize.h \
+    GUI/Theme/Theme.h \
     Library/QCustomPlot/qcustomplot.h \
     Process/Encryption/simplecrypt.h \
     Process/Process.h
