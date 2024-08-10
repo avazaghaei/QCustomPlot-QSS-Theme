@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Source/QSS/QSS_Custom/AMOLED.qss</file>
+        <file>Source/QSS/QSS_Custom/Aqua.qss</file>
+        <file>Source/QSS/QSS_Custom/ConsoleStyle.qss</file>
+        <file>Source/QSS/QSS_Custom/ElegantDark.qss</file>
+        <file>Source/QSS/QSS_Custom/MacOS.qss</file>
+        <file>Source/QSS/QSS_Custom/ManjaroMix.qss</file>
+        <file>Source/QSS/QSS_Custom/MaterialDark.qss</file>
+        <file>Source/QSS/QSS_Custom/NeonButtons.qss</file>
+        <file>Source/QSS/QSS_Custom/Ubuntu.qss</file>
+        <file>Source/QSS/QSS_Standard/Adaptic.qss</file>
+        <file>Source/QSS/QSS_Standard/Chatbee.qss</file>
+        <file>Source/QSS/QSS_Standard/Clientor.qss</file>
+        <file>Source/QSS/QSS_Standard/Clocker.qss</file>
+        <file>Source/QSS/QSS_Standard/Combinear.qss</file>
+        <file>Source/QSS/QSS_Standard/Darkeum.qss</file>
+        <file>Source/QSS/QSS_Standard/DeepBox.qss</file>
+        <file>Source/QSS/QSS_Standard/Devsion.qss</file>
+        <file>Source/QSS/QSS_Standard/Diffnes.qss</file>
+        <file>Source/QSS/QSS_Standard/Dtor.qss</file>
+        <file>Source/QSS/QSS_Standard/ExcelOffice.qss</file>
+        <file>Source/QSS/QSS_Standard/Fibers.qss</file>
+        <file>Source/QSS/QSS_Standard/Fibrary.qss</file>
+        <file>Source/QSS/QSS_Standard/Gravira.qss</file>
+        <file>Source/QSS/QSS_Standard/HackBook.qss</file>
+        <file>Source/QSS/QSS_Standard/Hookmark.qss</file>
+        <file>Source/QSS/QSS_Standard/Incrypt.qss</file>
+        <file>Source/QSS/QSS_Standard/Integrid.qss</file>
+        <file>Source/QSS/QSS_Standard/MailSy.qss</file>
+        <file>Source/QSS/QSS_Standard/Medize.qss</file>
+        <file>Source/QSS/QSS_Standard/MyWatch.qss</file>
+        <file>Source/QSS/QSS_Standard/Photoxo.qss</file>
+        <file>Source/QSS/QSS_Standard/PicPax.qss</file>
+        <file>Source/QSS/QSS_Standard/Remover.qss</file>
+        <file>Source/QSS/QSS_Standard/SpyBot.qss</file>
+        <file>Source/QSS/QSS_Standard/Takezo.qss</file>
+        <file>Source/QSS/QSS_Standard/Toolery.qss</file>
+        <file>Source/QSS/QSS_Standard/Webmas.qss</file>
+        <file>Source/QSS/QSS_Standard/Wstartpage.qss</file>
+    </qresource>
+</RCC>
