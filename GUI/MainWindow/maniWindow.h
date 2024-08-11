@@ -22,13 +22,20 @@ private:
     settings*      ClassSettings;
     zoomSettings*  ClassZoomSettings;
 
+
+    QGroupBox* grbLeftComponent;
+    QGroupBox* grbForm;
+
+
     //functions
     void init_classes();
-    void set_ftom();
+    void setLeftComponents();
+    void setRightComponents();
+    void setForm();
 
 
 public:
-    maniWindow(QWidget *parent = nullptr);
+    maniWindow();
 };
 
 #endif // MANIWINDOW_H

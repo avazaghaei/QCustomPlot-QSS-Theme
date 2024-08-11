@@ -41,26 +41,29 @@ void settings::initLabels()
     {
 
         lstLabels[i]->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+        lstLabels[i]->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
     }
 }
 
 void settings::initCheckBoxes()
 {
-    chkbCustomTicks  = new QCheckBox("Custom Ticks");
-    chkbEnablePointSelection   = new QCheckBox("Enable point selection mode");
-    chkbReverseXaxis = new QCheckBox("Reverse x axis");
+    chkbCustomTicks          = new QCheckBox("Custom Ticks");
+    chkbEnablePointSelection = new QCheckBox("Enable Point Selection");
+    chkbReverseXaxis         = new QCheckBox("Reverse x axis");
 }
 
 
 void settings::initSpinBoxes()
 {
+    sbCustomTicks = new QSpinBox;
+    sbWidth       = new QSpinBox;
+    sbHeight      = new QSpinBox;
+
     dsbMaximumX   = new QDoubleSpinBox;
     dsbMinimumX   = new QDoubleSpinBox;
     dsbMaximumY   = new QDoubleSpinBox;
     dsbMinimumY   = new QDoubleSpinBox;
-    sbCustomTicks = new QSpinBox;
-    sbWidth       = new QSpinBox;
-    sbHeight      = new QSpinBox;
+
 
     const int nn = 3;
     QSpinBox* lstSpinBoxes[nn] =
@@ -69,7 +72,7 @@ void settings::initSpinBoxes()
 
     for(int i = 0; i < nn; ++i)
     {
-        lstSpinBoxes[i]->setAlignment(Qt::AlignLeft);
+        lstSpinBoxes[i]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
     }
 
     const int n = 4;
@@ -80,7 +83,7 @@ void settings::initSpinBoxes()
 
     for(int i = 0; i < n; ++i)
     {
-        lstDoubleSpinBoxes[i]->setAlignment(Qt::AlignLeft);
+        lstDoubleSpinBoxes[i]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
     }
 
     dsbMinimumX->setRange(0, 10000);
@@ -102,6 +105,7 @@ void settings::initRadioButtons()
     rdBtnAutoScale   = new QRadioButton("Auto Scale");
     rdBtnCustomScale = new QRadioButton("Custom Scale");
 
+
     QButtonGroup *rdBtnGroupPlacement = new QButtonGroup();
     QButtonGroup *rdBtnGroupScale     = new QButtonGroup();
 
@@ -118,6 +122,7 @@ void settings::initRadioButtons()
 void settings::initPushButtons()
 {
     btnSavePlotImage = new QPushButton("Save Plot Image");
+    btnSavePlotImage->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 }
 
 void settings::initGroupBoxes()
@@ -131,7 +136,6 @@ void settings::setForm()
 {
     QGridLayout* grl = new QGridLayout();
 
-    grl = new QGridLayout();
     grl->addWidget(lblYaxisPlacement , 0, 0);
     grl->addWidget(rdBtnLeftAxis     , 0, 1);
     grl->addWidget(rdBtnRightAxis    , 0, 2);
@@ -183,7 +187,7 @@ void settings::setConnections()
     {
         //custom Ticks
         connect(chkbCustomTicks, &QCheckBox::clicked,       this, &settings::slotSetTicks);
-        connect(sbCustomTicks  , SIGNAL(valueChanged(int)), this, SLOT(slotSetTicks()));
+        connect(sbCustomTicks,   SIGNAL(valueChanged(int)), this, SLOT(slotSetTicks()));
     }
     {
         //save Image

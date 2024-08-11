@@ -1,11 +1,13 @@
 #include "maniWindow.h"
 
 
-maniWindow::maniWindow(QWidget *parent) : QWidget(parent)
+maniWindow::maniWindow()
 {
 
     init_classes();
-    set_ftom();
+    setLeftComponents();
+    setRightComponents();
+    setForm();
 }
 
 void maniWindow::init_classes()
@@ -15,14 +17,33 @@ void maniWindow::init_classes()
     ClassZoomSettings = zoomSettings::getInstance();
 }
 
-void maniWindow::set_ftom()
+void maniWindow::setLeftComponents()
 {
-    QGridLayout* grl = new QGridLayout();
+    QVBoxLayout* vbl = new QVBoxLayout();
+    vbl->addWidget(ClassCustomPlot->ClassCustomPlot);
+    vbl->addLayout(ClassZoomSettings->hblForm);
 
-    grl->addWidget(ClassCustomPlot->ClassCustomPlot, 0, 0, 2, 1);
-    grl->addWidget(ClassSettings->grbForm, 0, 1);
-    grl->addWidget(ClassZoomSettings->grbForm, 1, 1);
+    grbLeftComponent = new QGroupBox("QCustomPlot");
+    grbLeftComponent->setLayout(vbl);
+}
 
-    this->setLayout(grl);
+void maniWindow::setRightComponents()
+{
+    QHBoxLayout* grl = new QHBoxLayout();
+    grl->addWidget(grbLeftComponent,       5);
+    grl->addWidget(ClassSettings->grbForm, 1);
 
+    grbForm = new QGroupBox();
+    grbForm->setLayout(grl);
+}
+
+void maniWindow::setForm()
+{
+    QGridLayout* l = new QGridLayout;
+    l->addWidget(grbForm);
+
+    this->setLayout(l);
+    this->show();
+
+    this->move(QApplication::desktop()->screen()->rect().center() - this->rect().center());
 }

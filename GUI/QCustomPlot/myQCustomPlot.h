@@ -25,8 +25,9 @@ class myQCustomPlot : public QWidget
     Q_OBJECT
 private:
 //Variables
+
     /*!
-     * \brief custom class objects
+     * \brief QCustomPlot class objects
      */
     QCustomPlot* ClassNewFullCustomPlot;
 
@@ -86,6 +87,11 @@ private:
     void initClass();
 
     /*!
+     * \brief Instantiate custom group boxes
+     */
+    void initGroupBoxes();
+
+    /*!
      * \brief Instantiate QCustopmPlot class objects
      */
     QCustomPlot* initQCustomPlot();
@@ -125,6 +131,10 @@ public:
      * \brief QCustomPlot class objects
      */
     QCustomPlot* ClassCustomPlot;
+    /*!
+     * \brief Expose object for external configuration
+     */
+    QGroupBox* grbForm;
 /***********************************************************/
 //Functions
     /*!

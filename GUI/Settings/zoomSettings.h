@@ -24,9 +24,6 @@ private:
     QPushButton* btnResetZoom;
     QPushButton* btnAreaSelection;
 
-    //spacer
-    QSpacerItem* spacerZoomSettings;
-
 /***********************************************************/
 //Functions
 
@@ -39,11 +36,6 @@ private:
      * \brief Instantiate custom group boxes
      */
     void initGroupBoxes();
-
-    /*!
-     * \brief Instantiate custom spacer
-     */
-    void initSpacer();
 
     /*!
      * \brief Configure complete form layout and components
@@ -72,6 +64,9 @@ public:
 
 
     zoomSettings();
+
+
+    QHBoxLayout* hblForm;
 
 signals:
     /*!

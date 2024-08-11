@@ -12,10 +12,10 @@ myQCustomPlot::myQCustomPlot()
 {
     initVariables();
     initClass();
+    initGroupBoxes();
     initTimer();
     setContextMenu();
     initFullWindow();
-
 }
 
 void myQCustomPlot::initVariables()
@@ -32,9 +32,17 @@ void myQCustomPlot::initClass()
     ClassCustomPlot = initQCustomPlot();
 }
 
+void myQCustomPlot::initGroupBoxes()
+{
+    grbForm = new QGroupBox();
+
+    grbForm->setTitle("QCustomPlot");
+}
+
 QCustomPlot* myQCustomPlot::initQCustomPlot()
 {
     QCustomPlot* plot = new QCustomPlot;
+
     plot->addGraph();
     plot->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     plot->graph(0)->setLineStyle(QCPGraph::lsNone);
@@ -146,7 +154,6 @@ void myQCustomPlot::initFullWindow()
         ClassNewFullCustomPlot->setParent(widgetFullWindow);
     }
 }
-
 
 void myQCustomPlot::slotGenerateRandomNumber()
 {

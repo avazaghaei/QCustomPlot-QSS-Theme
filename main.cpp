@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
     Process* ClassProcess = new Process;
 
     maniWindow* ClassMainWindow = new maniWindow;
-    ClassMainWindow->show();
 
     return a.exec();
 }
