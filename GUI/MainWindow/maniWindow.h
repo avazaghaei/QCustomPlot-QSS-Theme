@@ -13,6 +13,7 @@
 #include <GUI/QCustomPlot/myQCustomPlot.h>
 #include <GUI/Settings/settings.h>
 #include <GUI/Settings/zoomSettings.h>
+#include "GUI/Theme/Theme.h"
 
 class maniWindow : public QWidget
 {
@@ -21,16 +22,21 @@ private:
     myQCustomPlot* ClassCustomPlot;
     settings*      ClassSettings;
     zoomSettings*  ClassZoomSettings;
+    Theme*         ClassTheme;
 
+    //menu
+    QMenuBar* menuBar;
+    QMenu*    menu;
 
     QGroupBox* grbLeftComponent;
-    QGroupBox* grbForm;
 
 
     //functions
     void init_classes();
+    void initMenuBar();
+    void initMenu();
+    void setMenuBar();
     void setLeftComponents();
-    void setRightComponents();
     void setForm();
 
 

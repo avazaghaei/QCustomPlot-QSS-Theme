@@ -2,8 +2,8 @@
 
 Theme::Theme(QWidget *parent) : QWidget(parent)
 {
-    strAddressCustomQSS   = ":/QSS/Source/Folder_QSS/Custom_QSS/";
-    strAddressStandardQSS = ":/QSS/Source/Folder_QSS/Standard_QSS/";
+    strAddressCustomQSS   = ":/Source/QSS/QSS_Custom/";
+    strAddressStandardQSS = ":/Source/QSS/QSS_Standard/";
     initMenu();
     setMenu();
     setConnection();
