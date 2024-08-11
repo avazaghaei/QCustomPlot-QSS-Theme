@@ -43,6 +43,8 @@ QCustomPlot* myQCustomPlot::initQCustomPlot()
 {
     QCustomPlot* plot = new QCustomPlot;
 
+    plot->setBackground(QBrush(QColor(36, 36, 36)));
+
     plot->addGraph();
     plot->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     plot->graph(0)->setLineStyle(QCPGraph::lsNone);
@@ -54,7 +56,7 @@ QCustomPlot* myQCustomPlot::initQCustomPlot()
     pen.setColor(QColor(150,0,0));
     plot->graph(0)->setPen(pen);
 
-    plot->setBackground(Qt::lightGray);
+//    plot->setBackground(Qt::lightGray);
 
 
 
@@ -64,7 +66,29 @@ QCustomPlot* myQCustomPlot::initQCustomPlot()
     plot->xAxis->setLabel("X");
     plot->yAxis->setLabel("Y");
 
+    {
+        setCustomizePlot(plot->xAxis);
+        setCustomizePlot(plot->yAxis);
+        setCustomizePlot(plot->xAxis2);
+        setCustomizePlot(plot->yAxis2);
+    }
+
     return plot;
+}
+
+void myQCustomPlot::setCustomizePlot(QCPAxis *axis)
+{
+   axis->setLabelColor(Qt::white);
+   axis->setTickLabelColor(Qt::white);
+
+   QPen pen;
+   pen.setColor(QColor(72, 145, 180));
+
+   axis->setBasePen(pen);
+   axis->grid()->setPen(pen);
+   axis->setTickPen(pen);
+   axis->setSubTickPen(pen);
+
 }
 
 void myQCustomPlot::plot()

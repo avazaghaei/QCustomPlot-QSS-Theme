@@ -41,7 +41,8 @@ void settings::initLabels()
     {
 
         lstLabels[i]->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-        lstLabels[i]->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+//        lstLabels[i]->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        lstLabels[i]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     }
 }
 
@@ -72,7 +73,8 @@ void settings::initSpinBoxes()
 
     for(int i = 0; i < nn; ++i)
     {
-        lstSpinBoxes[i]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+//        lstSpinBoxes[i]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+        lstSpinBoxes[i]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     }
 
     const int n = 4;
@@ -83,7 +85,8 @@ void settings::initSpinBoxes()
 
     for(int i = 0; i < n; ++i)
     {
-        lstDoubleSpinBoxes[i]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+//        lstDoubleSpinBoxes[i]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+        lstDoubleSpinBoxes[i]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     }
 
     dsbMinimumX->setRange(0, 10000);
@@ -122,7 +125,8 @@ void settings::initRadioButtons()
 void settings::initPushButtons()
 {
     btnSavePlotImage = new QPushButton("Save Plot Image");
-    btnSavePlotImage->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+//    btnSavePlotImage->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    btnSavePlotImage->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 }
 
 void settings::initGroupBoxes()

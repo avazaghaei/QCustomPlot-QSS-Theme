@@ -95,6 +95,8 @@ private:
      * \brief Instantiate QCustopmPlot class objects
      */
     QCustomPlot* initQCustomPlot();
+    void setCustomizePlot(QCPAxis* axis);
+
 
 
     /*!
