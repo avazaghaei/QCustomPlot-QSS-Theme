@@ -39,7 +39,6 @@ While many of the underlying data visualization features remain similar to our o
 
 ### Building the Application
 1. Clone the Repository:
-   ```bash
    git clone https://github.com/avazaghaei/QCustomPlot-QSS-Theme.git
 2. Open the Project:
 
