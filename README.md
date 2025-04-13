@@ -7,29 +7,27 @@ This Qt C++ application extends the QCustomPlot library to not only provide inte
 This project builds on our previous work with QCustomPlot applications by introducing a dynamic QSS theme system. In addition to familiar features such as point selection, plotting, axis customization, zoom, and area selection, the application allows users to switch between multiple predefined themes at runtime, providing an instant visual transformation.
 
 While many of the underlying data visualization features remain similar to our other QCustomPlot-based projects, this repository highlights:
-- Dynamic Theme Switching: Quickly apply different QSS themes during runtime.
-- Enhanced User Interface: A clean, code-based GUI that prioritizes flexibility and maintainability.
-
+- **Dynamic Theme Switching:** Quickly apply different QSS themes during runtime.
+- **Enhanced User Interface:** A clean, code-based GUI that prioritizes flexibility and maintainability.
 ## Features
 
 ### Dynamic QSS Theme Switching
-- Runtime Theme Change: Switch themes on the fly without restarting the application.
-- Multiple Predefined Themes: Quickly compare and select the best visual appearance for your data visualizations.
-- Live Preview: Immediate visual feedback as themes are applied.
+- **Runtime Theme Change:** Switch themes on the fly without restarting the application.
+- **Multiple Predefined Themes:** Quickly compare and select the best visual appearance for your data visualizations.
+- **Live Preview:** Immediate visual feedback as themes are applied.
 
 ### QCustomPlot Enhancements
-- Interactive Data Visualization:
+- **Interactive Data Visualization:**
   - Customize plot types, axes, zoom, and pan capabilities.
   - Precise point selection for detailed data analysis.
-- Custom Modifications:
+- **Custom Modifications:**
   - Tailored modifications to QCustomPlot for improved performance and unique visualization requirements.
 
 ### Code-Based GUI Development
-- Clean & Maintainable Code:
+- **Clean & Maintainable Code:**
   - The entire GUI is developed programmatically, fostering reusability and version control friendliness.
-- Flexibility:
+- **Flexibility:**
   - Easily adapt or extend the UI without being tied down by drag-and-drop generated code.
-
 ## Getting Started
 
 ### Prerequisites
@@ -38,40 +36,48 @@ While many of the underlying data visualization features remain similar to our o
 - **Development Environment:** Use Qt Creator or any preferred IDE that supports Qt project development.
 
 ### Building the Application
-1. Clone the Repository:
+
+1. **Clone the Repository:**
+   ```bash
    git clone https://github.com/avazaghaei/QCustomPlot-QSS-Theme.git
-2. Open the Project:
+    Open the Project:
 
-    Open the provided .pro file in Qt Creator.
+        Open the provided .pro file in Qt Creator.
 
-3. Build the Project:
+    Build the Project:
 
-    Click the Build button in Qt Creator.
+        Click the Build button in Qt Creator.
 
-4. Run the Application:
+    Run the Application:
 
-    Execute the application from within Qt Creator to see the interactive plotting and live theme switching in action.
-	
-### Building the ApplicationUsage
+        Execute the application from within Qt Creator to see the interactive plotting and live theme switching in action.
+
+Usage
 
     Theme Switching:
     At runtime, change the application's theme through the provided UI controls. This will immediately update the look of all widgets, including the QCustomPlot visualization.
 
     Data Visualization:
     Interact with the plot using built-in features like zooming, panning, and point selection.
+---
 
-### Building the ApplicationFuture Enhancements
+### **Part 4: Future Enhancements, Contribution, License, and Contact**
 
-    Extended Theme Library: Expand the set of available themes to offer more design options.
+```markdown
+## Future Enhancements
 
-    User-Defined Themes: Allow users to create and apply their own custom QSS themes.
+- **Extended Theme Library:** Expand the set of available themes to offer more design options.
+- **User-Defined Themes:** Allow users to create and apply their own custom QSS themes.
+- **Enhanced Interactivity:** Improve plot interaction features further while maintaining dynamic theme flexibility.
 
-    Enhanced Interactivity: Improve plot interaction features further while maintaining dynamic theme flexibility.
+## Contribution
 
-### Building the ApplicationContribution
+Contributions and feedback are welcome! Please fork the repository and submit pull requests or open issues for any enhancements or bugs you find.
 
-	Contributions and feedback are welcome! Please fork the repository and submit pull requests or open issues for any enhancements or bugs you find.
+## License
 
-### Building the ApplicationLicense
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-	This project is licensed under the MIT License. See the LICENSE file for details.
+## Contact
+
+For inquiries or suggestions regarding this project, please contact me via [GitHub](https://github.com/avazaghaei) or open an issue in the repository.
