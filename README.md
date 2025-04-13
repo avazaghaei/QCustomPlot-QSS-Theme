@@ -56,22 +56,22 @@ While many of the underlying data visualization features remain similar to our o
     Click on the Run button in the Qt Creator toolbar.
 
 ### **Usage:**
-- **Theme Switching:**At runtime, change the application's theme through the provided UI controls. This will immediately update the look of all widgets, including the QCustomPlot visualization.
-- **Data Visualization:**Interact with the plot using built-in features like zooming, panning, and point selection.
+- **Theme Switching:** At runtime, change the application's theme through the provided UI controls. This will immediately update the look of all widgets, including the QCustomPlot visualization.
+- **Data Visualization:** Interact with the plot using built-in features like zooming, panning, and point selection.
   
 ### **Future Enhancements:**
-- **Extended Theme Library:**Expand the set of available themes to offer more design options.
-- **User-Defined Themes:**Allow users to create and apply their own custom QSS themes.
-- **Enhanced Interactivity:**Improve plot interaction features further while maintaining dynamic theme flexibility.
+- **Extended Theme Library:** Expand the set of available themes to offer more design options.
+- **User-Defined Themes:** Allow users to create and apply their own custom QSS themes.
+- **Enhanced Interactivity:** Improve plot interaction features further while maintaining dynamic theme flexibility.
   
 ### **Contribution:**
 	
-	* Contributions and feedback are welcome! Please fork the repository and submit pull requests or open issues for any enhancements or bugs you find.
+	Contributions and feedback are welcome! Please fork the repository and submit pull requests or open issues for any enhancements or bugs you find.
 	
 ### **License:**
 	
-	* This project is licensed under the MIT License. See the LICENSE file for details.
+	This project is licensed under the MIT License. See the LICENSE file for details.
 	
 ### **Contact:**
 	
-	* For inquiries or suggestions regarding this project, please contact me via GitHub or open an issue in the repository.
+	For inquiries or suggestions regarding this project, please contact me via GitHub or open an issue in the repository.
