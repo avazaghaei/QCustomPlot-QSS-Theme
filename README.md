@@ -66,12 +66,12 @@ While many of the underlying data visualization features remain similar to our o
   
 ### **Contribution:**
 	
-	Contributions and feedback are welcome! Please fork the repository and submit pull requests or open issues for any enhancements or bugs you find.
+Contributions and feedback are welcome! Please fork the repository and submit pull requests or open issues for any enhancements or bugs you find.
 	
 ### **License:**
 	
-	This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 	
 ### **Contact:**
 	
-	For inquiries or suggestions regarding this project, please contact me via GitHub or open an issue in the repository.
+For inquiries or suggestions regarding this project, please contact me via GitHub or open an issue in the repository.
